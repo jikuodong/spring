@@ -1,5 +1,7 @@
 package net.jikuodong.spring.service.user;
 
+import org.springframework.stereotype.Service;
+
 /**
  * describe 用户service层
  *
@@ -8,5 +10,6 @@ package net.jikuodong.spring.service.user;
  * @ClassName UserService.java
  * @createTime 2019年06月05日 15:23:00
  */
+@Service
 public class UserService {
 }

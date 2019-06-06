@@ -1,5 +1,13 @@
 package net.jikuodong.spring.controller;
 
+import net.jikuodong.spring.controller.base.BaseController;
+import net.jikuodong.spring.service.user.UserService;
+import net.jikuodong.spring.util.PageData;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
 /**
  * describe 用户信息Controller层
  *
@@ -8,5 +16,21 @@ package net.jikuodong.spring.controller;
  * @ClassName UserController.java
  * @createTime 2019年06月05日 15:22:00
  */
-public class UserController {
+@Controller
+@RequestMapping("user")
+public class UserController extends BaseController {
+    private UserService userService;
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @RequestMapping("test")
+    public ModelAndView test() {
+        logBefore(logger, "测试ssm");
+        PageData pd = this.getPageData();
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("success");
+        return mv;
+    }
 }
