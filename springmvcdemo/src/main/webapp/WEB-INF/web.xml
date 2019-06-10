@@ -8,7 +8,7 @@
   <!--全局范围 内环境参数初始化-->
   <context-param>
     <param-name>contextConfigLocation</param-name> <!--参数名称-->
-    <param-value>classpath:spring-mybatis.xml</param-value> <!--参数取值-->
+    <param-value>classpath:spring/ApplicationContext.xml</param-value> <!--参数取值-->
   </context-param>
 
   <!--以下配置的加载顺序：先ServletContext>> context-param>> listener>> filter >> servlet>>spring-->
@@ -51,7 +51,7 @@
     <!--用来定义参数,可有多个init-param。在servlet类中通过getInitParamenter(String name)方法访问初始化参数    -->
     <init-param>
       <param-name>contextConfigLocation</param-name> <!--参数名称-->
-      <param-value>classpath:spring-mvc.xml</param-value> <!--参数值-->
+      <param-value>classpath:spring/ApplicationContext-mvc.xml</param-value> <!--参数值-->
     </init-param>
     <!--当值为正数或零时：Servlet容器先加载数值小的servlet,再依次加载其他数值大的servlet-->
     <load-on-startup>1</load-on-startup>
