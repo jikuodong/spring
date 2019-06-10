@@ -16,7 +16,9 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-        <!--1、配置映射器与适配器-->
+        <!--启用注解-->
+        <context:annotation-config />
+        <!--配置映射器与适配器-->
         <mvc:annotation-driven/>
         <!--自动扫描包，使SpringMVC认为包下用了@controller注解的类是控制器-->
         <context:component-scan base-package="net.jikuodong.spring.controller">
@@ -40,15 +42,4 @@
             <!-- 内存中的最大值-->
             <property name="maxInMemorySize" value="40960"/>
         </bean>
-        <!--  配置静态资源，防止被springmvc过滤 -->
-        <mvc:resources location="/" mapping="/**/*.html"/>
-        <mvc:resources location="/" mapping="/**/*.js"/>
-        <mvc:resources location="/" mapping="/**/*.css"/>
-        <mvc:resources location="/" mapping="/**/*.png"/>
-        <mvc:resources location="/" mapping="/**/*.gif"/>
-        <mvc:resources location="/" mapping="/**/*.woff"/>
-        <mvc:resources location="/" mapping="/**/*.ttf"/>
-        <mvc:resources location="/" mapping="/**/*.jpg"/>
-        <mvc:resources location="/" mapping="/**/*.mp3"/>
-        <mvc:resources location="/" mapping="/**/*.mp4"/>
 </beans>
