@@ -89,6 +89,13 @@
       <version>${spring.version}</version>
     </dependency>
 
+    <!--事务相关-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>5.1.7.RELEASE</version>
+    </dependency>
+
     <!--mybatis核心包-->
     <dependency>
       <groupId>org.mybatis</groupId>
@@ -137,7 +144,7 @@
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>
-      <version>1.1.16</version>
+      <version>1.1.17</version>
     </dependency>
 
     <dependency>
