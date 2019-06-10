@@ -14,7 +14,7 @@
 			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
 		</File>
 		<!--这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
-		<RollingFile name="RollingFile" fileName="${sys:catalina.home}/log/pms.log" filePattern="${sys:catalina.home}/logs/pms.%d{yyyy-MM-dd}.log.gz">
+		<RollingFile name="RollingFile" fileName="${sys:catalina.home}/log/ssm.log" filePattern="${sys:catalina.home}/logs/pms.%d{yyyy-MM-dd}.log.gz">
 			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
 			<TimeBasedTriggeringPolicy interval="1" modulate ="true"/>
 		</RollingFile>
@@ -22,7 +22,7 @@
 	<!--然后定义Logger，只有定义了Logger并引入的appender，appender才会生效-->
 	<Loggers>
 		<!-- 项目 -->
-		<logger name="net.froeasy" level="debug" additivity="false">
+		<logger name="net.jikuodong" level="debug" additivity="false">
 			<AppenderRef ref="Console"/>
 			<AppenderRef ref="RollingFile" />
 		</logger>
