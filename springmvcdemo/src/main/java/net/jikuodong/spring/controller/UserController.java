@@ -32,6 +32,7 @@ public class UserController extends BaseController {
         PageData pd = this.getPageData();
         ModelAndView mv = new ModelAndView();
         User user = userService.getResult();
+        mv.addObject("user", user);
         mv.setViewName("success");
         return mv;
     }
