@@ -1,5 +1,6 @@
 package net.jikuodong.spring.service.user;
 
+import net.jikuodong.spring.po.User;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Service;
  * @ClassName UserService.java
  * @createTime 2019年06月05日 15:23:00
  */
-@Service
-public class UserService {
+@Service("userService")
+public interface UserService {
+
+    public User getResult();
 }

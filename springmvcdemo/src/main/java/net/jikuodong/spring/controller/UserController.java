@@ -1,12 +1,15 @@
 package net.jikuodong.spring.controller;
 
 import net.jikuodong.spring.controller.base.BaseController;
+import net.jikuodong.spring.po.User;
 import net.jikuodong.spring.service.user.UserService;
 import net.jikuodong.spring.util.PageData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.jws.soap.SOAPBinding;
 
 /**
  * describe 用户信息Controller层
@@ -30,6 +33,7 @@ public class UserController extends BaseController {
         logBefore(logger, "测试ssm");
         PageData pd = this.getPageData();
         ModelAndView mv = new ModelAndView();
+        User user = userService.getResult();
         mv.setViewName("success");
         return mv;
     }
