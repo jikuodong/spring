@@ -23,7 +23,7 @@
         <!-- 数据库超过10秒仍未响应则超时 -->
         <setting name="defaultStatementTimeout" value="10" />
         <!-- 指定mybatis使用log4j2来记录日志 COMMONS_LOGGING、LOG4J2、SLF4J  -->
-        <setting name="logImpl" value="LOG4J" />
+        <setting name="logImpl" value="LOG4J2" />
     </settings>
 
     <typeAliases>
