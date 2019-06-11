@@ -63,7 +63,7 @@
     <!--指定servlet的名称-->
     <servlet-name>SpringMVC</servlet-name>
     <!--指定servlet锁对应的URL-->
-    <url-pattern>/</url-pattern>
+    <url-pattern>*.do</url-pattern>
   </servlet-mapping>
   <!-- 连接池 启用Web监控统计功能   start-->
   <filter>
