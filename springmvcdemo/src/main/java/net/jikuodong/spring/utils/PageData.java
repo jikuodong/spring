@@ -1,4 +1,4 @@
-package net.jikuodong.spring.util;
+package net.jikuodong.spring.utils;
 
 import java.util.Collection;
 import java.util.HashMap;

@@ -1,5 +1,5 @@
 package net.jikuodong.spring.controller.base;
-import net.jikuodong.spring.util.PageData;
+import net.jikuodong.spring.utils.PageData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.context.request.RequestContextHolder;

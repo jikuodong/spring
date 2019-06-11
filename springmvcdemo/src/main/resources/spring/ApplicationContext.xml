@@ -6,6 +6,9 @@
     <import resource="ApplicationContext-mybatis.xml" />
 
     <bean id="multipartResolver" name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
+    <!-- 初始化系统参数的bean -->
+    <bean class="net.jikuodong.spring.communication.handler.ServiceHandler" />
     <!-- 自动加载构建bean -->
     <context:component-scan base-package="net.jikuodong.spring.dao,net.jikuodong.spring.service">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>

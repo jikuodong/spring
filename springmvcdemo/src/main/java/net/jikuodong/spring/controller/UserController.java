@@ -3,7 +3,7 @@ package net.jikuodong.spring.controller;
 import net.jikuodong.spring.controller.base.BaseController;
 import net.jikuodong.spring.po.User;
 import net.jikuodong.spring.service.user.UserService;
-import net.jikuodong.spring.util.PageData;
+import net.jikuodong.spring.utils.PageData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -28,6 +28,6 @@
 
     <typeAliases>
         <typeAlias type="net.jikuodong.spring.po.User" alias="User"/>
-        <typeAlias type="net.jikuodong.spring.util.PageData" alias="pd"/>
+        <typeAlias type="net.jikuodong.spring.utils.PageData" alias="pd"/>
     </typeAliases>
 </configuration>
