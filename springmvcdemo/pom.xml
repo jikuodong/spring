@@ -146,7 +146,7 @@
     </dependency>
     <!--log end-->
 
-    <!--数据源-->
+    <!--阿里数据源-->
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>

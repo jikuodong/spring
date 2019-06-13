@@ -38,18 +38,26 @@ public class UserController extends BaseController {
         logBefore(logger, "测试ssm");
         PageData pd = this.getPageData();
         ModelAndView mv = new ModelAndView();
-        // User user = userService.getResult();
-       // mv.addObject("user", user);
         mv.setViewName("success");
         return mv;
     }
 
+    /**
+     * describe 获取用户列表
+     *
+     * @method getUser
+     * @author JKD
+     * @return java.lang.Object
+     * @data 2019/6/13 15:58
+     */
     @RequestMapping("getUser")
     public @ResponseBody Object getUser(){
         logBefore(logger, "获取用户集合");
         PageData pageData  = this.getPageData();
-        int limit = CommonUtils.toInt(pageData.get("limit")); // 页码显示列数
-        int offset = CommonUtils.toInt(pageData.get("offset")); // 页码
+        // 页码显示列数
+        int limit = CommonUtils.toInt(pageData.get("limit"));
+        // 页码
+        int offset = CommonUtils.toInt(pageData.get("offset"));
         PageInfo pageInfo = userService.getResult(offset, limit);
         Map map = new HashMap();
         map.put("total", pageInfo.getTotal());

@@ -21,7 +21,6 @@
     <script type="text/javascript" src="${ctx}/plugins/bootStrapTable/bootstrap-table-zh-CN.min.js" ></script>
 </head>
 <body>
-    成功！${user.userName}
     <table id="ArbetTable"></table>
 </body>
 
