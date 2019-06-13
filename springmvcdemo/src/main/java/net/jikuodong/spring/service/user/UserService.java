@@ -1,5 +1,6 @@
 package net.jikuodong.spring.service.user;
 
+import com.github.pagehelper.PageInfo;
 import net.jikuodong.spring.po.User;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +15,16 @@ import org.springframework.stereotype.Service;
 @Service("userService")
 public interface UserService {
 
-    public User getResult();
+    /**
+     * describe
+     *
+     * @method getResult
+     * @author JKD
+     * @param limit 显示列数
+     * @param offset 页码
+     * @return com.github.pagehelper.PageInfo
+     * @data 2019/6/12 16:19
+     * @throws
+     */
+    public PageInfo getResult(int offset, int limit);
 }

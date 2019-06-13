@@ -209,4 +209,7 @@
       UPDATE_USER_ID = #{updateUserId,jdbcType=VARCHAR}
     where USER_ID = #{userId,jdbcType=VARCHAR}
   </update>
+  <select id="getUser" resultType="pd">
+    select * from t_sys_user
+  </select>
 </mapper>

@@ -1,13 +1,20 @@
 package net.jikuodong.spring.controller;
 
+import com.github.pagehelper.PageInfo;
+import com.google.gson.Gson;
 import net.jikuodong.spring.controller.base.BaseController;
 import net.jikuodong.spring.po.User;
 import net.jikuodong.spring.service.user.UserService;
+import net.jikuodong.spring.utils.CommonUtils;
 import net.jikuodong.spring.utils.PageData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * describe 用户信息Controller层
@@ -31,9 +38,22 @@ public class UserController extends BaseController {
         logBefore(logger, "测试ssm");
         PageData pd = this.getPageData();
         ModelAndView mv = new ModelAndView();
-        User user = userService.getResult();
-        mv.addObject("user", user);
+        // User user = userService.getResult();
+       // mv.addObject("user", user);
         mv.setViewName("success");
         return mv;
+    }
+
+    @RequestMapping("getUser")
+    public @ResponseBody Object getUser(){
+        logBefore(logger, "获取用户集合");
+        PageData pageData  = this.getPageData();
+        int limit = CommonUtils.toInt(pageData.get("limit")); // 页码显示列数
+        int offset = CommonUtils.toInt(pageData.get("offset")); // 页码
+        PageInfo pageInfo = userService.getResult(offset, limit);
+        Map map = new HashMap();
+        map.put("total", pageInfo.getTotal());
+        map.put("rows", pageInfo.getList());
+        return map;
     }
 }
