@@ -17,12 +17,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * describe 用户信息Controller层
- *
+ * 用户信息Controller
  * @author JKD
  * @version 1.0.0
  * @ClassName UserController.java
- * @createTime 2019年06月05日 15:22:00
+ * @createTime 2019/06/05 15:22:00
  */
 @Controller
 @RequestMapping("user")

@@ -1,4 +1,4 @@
-package com.jkd1.service;
+package com.jkd.service;
 
 /**
  * @projectName: springdemo

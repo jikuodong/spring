@@ -1,4 +1,4 @@
-package com.jkd1.dao;
+package com.jkd.dao;
 
 /**
  * @projectName: springdemo
