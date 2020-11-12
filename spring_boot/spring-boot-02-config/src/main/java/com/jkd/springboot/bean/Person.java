@@ -1,6 +1,7 @@
 package com.jkd.springboot.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -25,6 +26,7 @@ public class Person {
 
     private Map<String,Object> maps;
     private List<Object> lists;
+    @NestedConfigurationProperty
     private Dog dog;
 
     @Override

@@ -1,5 +1,6 @@
 package com.jkd.springboot.bean;
 
+
 public class Dog {
     private String name;
     private Integer age;
