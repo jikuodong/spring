@@ -1,0 +1,19 @@
+package com.jkd.ticket.service.impl;
+
+import com.jkd.ticket.service.TicketService;
+import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.stereotype.Component;
+
+/**
+ * 实现方法
+ */
+
+@Component
+@DubboService // 将服务发布出去
+public class TicketServiceImpl implements TicketService {
+    @Override
+    public String getTicket() {
+        return "《厉害了我的国》";
+    }
+
+}
