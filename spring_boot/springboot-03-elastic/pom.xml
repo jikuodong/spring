@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <es.version>7.9.2</es.version>
+        <es.version>7.11.2</es.version>
     </properties>
     <dependencies>
         <!-- SpringBoot 默认使用SpringData Elasticsearch 模块进行操作-->
